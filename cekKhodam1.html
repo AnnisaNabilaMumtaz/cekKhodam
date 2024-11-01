@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam Ampuh</title>
+    <link rel="stylesheet" href="cekKhodam.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CEK KHODAM</h1>
+            <p class="cek-info">Masukkan nama Anda untuk mengetahui khodam yang ada didalam diri kamu</p>
+            <div class="search">
+                <form onsubmit="return false;">
+                    <input type="text" id="search"><br>
+                    <button id="btn-search" onclick="playClickAudio()">Check</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (Pop-up) -->
+    <div id="khodamModal" class="modal">
+        <div class="modal-content">
+            <h2>Khodam yang ada di dalam <span id="namaUser"></span> adalah:</h2>
+            <img id="khodamImage">
+            <p id="khodamResult"></p>
+            <button class="ulang-btn" id="closeModal" onclick="playClickAudio()">Ulangi</button>
+        </div>
+    </div>
+
+    <!-- BG Music -->
+    <audio id="bgMusic" autoplay muted>
+        <source src="sMarioBGM.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="popUpMusic" autoplay muted>
+        <source src="fartSE.MP3" type="audio/mp3" />
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="cekKhodam1.js"></script>
+</body>
+
+</html>
